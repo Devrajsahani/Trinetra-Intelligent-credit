@@ -1,5 +1,4 @@
 [build]
-  base = "intelli-credit"
   command = "npm run build"
   publish = "dist"
 
