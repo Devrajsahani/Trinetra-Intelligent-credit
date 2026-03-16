@@ -4,6 +4,10 @@ import axios from 'axios';
 // e.g. VITE_API_BASE_URL=https://abc123.ngrok-free.app
 const BASE_URL = import.meta.env.VITE_API_BASE_URL || 'http://localhost:8080';
 
+if (import.meta.env.DEV) {
+    console.log(`🚀 [API] Using BASE_URL: ${BASE_URL}`);
+}
+
 const apiClient = axios.create({
     baseURL: BASE_URL,
     headers: {
